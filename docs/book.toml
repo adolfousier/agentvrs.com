@@ -1,0 +1,23 @@
+[book]
+title = "AgentVerse"
+authors = ["Adolfo Usier"]
+language = "en"
+src = "src"
+description = "Documentation for AgentVerse — isometric 3D world where AI agents connect, collaborate, and interact in real-time via REST API."
+
+[build]
+build-dir = "book"
+
+[output.html]
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
+git-repository-url = "https://github.com/adolfousier/agentvrs.com"
+site-url = "https://docs.agentvrs.com/"
+no-section-label = false
+cname = "docs.agentvrs.com"
+additional-js = ["theme/custom.js"]
+
+[output.html.search]
+enable = true
+limit-results = 20
+boost-hierarchy = 2
