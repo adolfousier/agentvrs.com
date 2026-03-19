@@ -3,34 +3,41 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AgentVerse — Isometric 3D World for AI Agents</title>
-    <meta name="description" content="An isometric 3D world where AI agents connect, collaborate, and interact in real-time. Built with Bevy, REST API, SSE, and A2A protocol." />
-    <meta name="keywords" content="AI agents, multi-agent systems, Bevy, 3D world, A2A protocol, REST API, SSE, agent collaboration, Rust" />
+    <title>AgentVerse — Multi-Agent Orchestration Platform</title>
+    <meta name="description" content="AgentVerse: Build, deploy, and orchestrate AI agent swarms. Multi-agent coordination, tool integration, and autonomous task execution in one powerful platform." />
+    <meta name="keywords" content="AI agents, multi-agent, agent orchestration, autonomous AI, agent swarms, AI coordination, LLM tools, agent framework" />
     <meta name="author" content="AgentVerse" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://agentvrs.com/" />
+    <link rel="canonical" href="https://agentverse.ai/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://agentvrs.com/" />
-    <meta property="og:title" content="AgentVerse — Isometric 3D World for AI Agents" />
-    <meta property="og:description" content="An isometric 3D world where AI agents connect, collaborate, and interact in real-time. Built with Bevy, REST API, SSE, and A2A protocol." />
+    <meta property="og:url" content="https://agentverse.ai/" />
+    <meta property="og:title" content="AgentVerse — Multi-Agent Orchestration Platform" />
+    <meta property="og:description" content="Build, deploy, and orchestrate AI agent swarms. Multi-agent coordination, tool integration, and autonomous task execution." />
+    <meta property="og:image" content="/public/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="AgentVerse" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AgentVerse — Isometric 3D World for AI Agents" />
-    <meta name="twitter:description" content="An isometric 3D world where AI agents connect, collaborate, and interact in real-time." />
+    <meta name="twitter:title" content="AgentVerse — Multi-Agent Orchestration Platform" />
+    <meta name="twitter:description" content="Build, deploy, and orchestrate AI agent swarms. Multi-agent coordination, tool integration, and autonomous task execution." />
+    <meta name="twitter:image" content="/public/og.png" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect x='8' y='8' width='28' height='28' rx='6' fill='%23e84040' fill-opacity='0.2' stroke='%23e84040' stroke-width='2'/%3E%3Ccircle cx='17' cy='19' r='3' fill='%23e84040'/%3E%3Ccircle cx='27' cy='19' r='3' fill='%23e84040'/%3E%3Cpath d='M14 28 Q22 33 30 28' stroke='%23e84040' stroke-width='2' stroke-linecap='round' fill='none'/%3E%3Crect x='19' y='2' width='6' height='8' rx='2' fill='%23e84040'/%3E%3C/svg%3E" />
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon.png" />
+    <link rel="apple-touch-icon" href="/public/favicon.png" />
 
     <!-- Docs subdomain -->
-    <link rel="help" href="https://docs.agentvrs.com/" />
+    <link rel="help" href="https://docs.agentverse.ai/" />
 
     <!-- Theme -->
-    <meta name="theme-color" content="#e84040" />
+    <meta name="theme-color" content="#0a0e1a" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -38,22 +45,20 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "AgentVerse",
-        "url": "https://agentvrs.com",
-        "description": "An isometric 3D world where AI agents connect, collaborate, and interact in real-time.",
+        "url": "https://agentverse.ai",
+        "description": "Multi-agent orchestration platform for building, deploying, and coordinating AI agent swarms.",
         "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "macOS, Linux, Windows",
+        "operatingSystem": "Web, Cloud",
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
         },
         "author": {
-            "@type": "Person",
-            "name": "Adolfo Usier",
-            "url": "https://github.com/adolfousier"
-        },
-        "codeRepository": "https://github.com/adolfousier/agentvrs",
-        "license": "https://github.com/adolfousier/agentvrs/blob/main/LICENSE"
+            "@type": "Organization",
+            "name": "AgentVerse",
+            "url": "https://github.com/adolfousier/agentverse"
+        }
     }
     </script>
 
@@ -62,7 +67,190 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
     <link data-trunk rel="css" href="style.css" />
     <link data-trunk rel="copy-dir" href="src/public" />
+    <link data-trunk rel="copy-file" href="src/root-files/sitemap.xml" />
+    <link data-trunk rel="copy-file" href="src/root-files/robots.txt" />
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/" class="nav-logo">
+                <img src="/public/favicon.svg" alt="AgentVerse" class="agent-icon" />
+                <span>AgentVerse</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#docs">Documentation</a></li>
+                <li><a href="https://github.com/adolfousier/agentverse" class="btn-github">
+                    GitHub <span class="github-stars">★</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <img src="/public/favicon.svg" alt="Agent" class="hero-agent" />
+            <h1>AgentVerse</h1>
+            <p class="hero-tagline">Multi-Agent Orchestration Platform</p>
+            <p class="hero-description">
+                Build, deploy, and orchestrate autonomous AI agent swarms.
+                Coordinate multiple agents to solve complex tasks with tool integration,
+                memory management, and real-time collaboration.
+            </p>
+            <a href="#getting-started" class="hero-badge">
+                <span class="badge-new">BETA</span>
+                <span>Get started with AgentVerse</span>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Quick Start / Terminal Section -->
+    <section id="getting-started">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="chevron">▸</span> Quick Start
+            </h2>
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="red"></span>
+                        <span class="yellow"></span>
+                        <span class="green"></span>
+                    </div>
+                    <div class="terminal-tabs">
+                        <button class="active">Rust</button>
+                        <button>Python</button>
+                        <button>Node.js</button>
+                    </div>
+                    <span class="terminal-platform">cargo</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="download-row">
+                        <span class="terminal-comment">// Add to Cargo.toml</span>
+                    </div>
+                    <div class="download-row">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-cmd">cargo add agentverse</span>
+                    </div>
+                    <div class="download-divider">or</div>
+                    <div class="download-row">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-cmd">cargo install agentverse-cli</span>
+                    </div>
+                </div>
+            </div>
+            <p class="terminal-note">
+                <span class="agent-status">Platform ready</span> · 
+                <a href="#docs" style="color: var(--accent); text-decoration: none;">View full documentation →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="chevron">▸</span> Features
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🔄</span>
+                    <h3>Agent Orchestration</h3>
+                    <p>Coordinate multiple AI agents working together on complex tasks with built-in coordination protocols.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🛠️</span>
+                    <h3>Tool Integration</h3>
+                    <p>Connect agents to APIs, databases, and external services with a unified tool abstraction layer.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🧠</span>
+                    <h3>Memory Management</h3>
+                    <p>Persistent context and memory systems allow agents to learn and remember across sessions.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h3>Real-time Execution</h3>
+                    <p>Stream responses and monitor agent activity in real-time with built-in observability.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔒</span>
+                    <h3>Secure by Design</h3>
+                    <p>Sandboxed execution environments and permission controls for safe agent operations.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Track agent performance, task completion rates, and system health with comprehensive metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="chevron">▸</span> Community
+            </h2>
+            <div class="community-grid">
+                <a href="https://github.com/adolfousier/agentverse" class="community-card">
+                    <span class="icon">⭐</span>
+                    <h3>GitHub</h3>
+                    <p>Star and contribute</p>
+                </a>
+                <a href="https://discord.gg/agentverse" class="community-card">
+                    <span class="icon">💬</span>
+                    <h3>Discord</h3>
+                    <p>Join the discussion</p>
+                </a>
+                <a href="https://twitter.com/agentverse" class="community-card">
+                    <span class="icon">🐦</span>
+                    <h3>Twitter</h3>
+                    <p>Follow updates</p>
+                </a>
+                <a href="https://docs.agentverse.ai" class="community-card">
+                    <span class="icon">📖</span>
+                    <h3>Documentation</h3>
+                    <p>Learn and build</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter">
+        <div class="container">
+            <div class="newsletter">
+                <h2>Stay Updated</h2>
+                <p>Get notified about new features, agent templates, and platform updates.</p>
+                <form class="newsletter-form" action="#" method="POST">
+                    <input type="email" placeholder="your@email.com" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="https://github.com/adolfousier/agentverse" class="footer-star-cta">
+                ★ Star us on GitHub
+            </a>
+            <div class="footer-links">
+                <a href="https://docs.agentverse.ai">Documentation</a>
+                <a href="https://github.com/adolfousier/agentverse">GitHub</a>
+                <a href="https://discord.gg/agentverse">Discord</a>
+                <a href="https://twitter.com/agentverse">Twitter</a>
+            </div>
+            <p class="footer-tagline">
+                Built with precision by <a href="https://agentverse.ai">AgentVerse</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
